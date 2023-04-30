@@ -1,0 +1,465 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "place_id": 70978872,
+                "osm_type": "node",
+                "osm_id": 6734390141,
+                "display_name": "Yoshinoya, 30, Harbour Road, Wan Chai North, Wan Chai, Wan Chai District, Hong Kong Island, Hong Kong, China",
+                "place_rank": 30,
+                "category": "amenity",
+                "type": "fast_food",
+                "importance": 0.31001,
+                "icon": "https://nominatim.openstreetmap.org/ui/mapicons/food_fastfood.p.20.png"
+            },
+            "bbox": [
+                114.1770717,
+                22.2802721,
+                114.1771717,
+                22.2803721
+            ],
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1771217,
+                    22.2803221
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place_id": 43765701,
+                "osm_type": "node",
+                "osm_id": 3667331034,
+                "display_name": "Yoshinoya, Wan Chai Road, Morrison Hill, Wan Chai, Wan Chai District, Hong Kong Island, Hong Kong, China",
+                "place_rank": 30,
+                "category": "amenity",
+                "type": "fast_food",
+                "importance": 0.31001,
+                "icon": "https://nominatim.openstreetmap.org/ui/mapicons/food_fastfood.p.20.png"
+            },
+            "bbox": [
+                114.1769772,
+                22.2769158,
+                114.1770772,
+                22.2770158
+            ],
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1770272,
+                    22.2769658
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place_id": 54916739,
+                "osm_type": "node",
+                "osm_id": 4858618222,
+                "display_name": "Yoshinoya, Lockhart Road, East Point, Causeway Bay, Wan Chai District, Hong Kong Island, Hong Kong, 999077, China",
+                "place_rank": 30,
+                "category": "amenity",
+                "type": "fast_food",
+                "importance": 0.31001,
+                "icon": "https://nominatim.openstreetmap.org/ui/mapicons/food_fastfood.p.20.png"
+            },
+            "bbox": [
+                114.182848,
+                22.2806629,
+                114.182948,
+                22.2807629
+            ],
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.182898,
+                    22.2807129
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place_id": 12361383,
+                "osm_type": "node",
+                "osm_id": 1299465480,
+                "display_name": "Yoshinoya, King's Road, Fortress Hill, North Point, Eastern District, Hong Kong Island, Hong Kong, 999077, China",
+                "place_rank": 30,
+                "category": "amenity",
+                "type": "fast_food",
+                "importance": 0.31001,
+                "icon": "https://nominatim.openstreetmap.org/ui/mapicons/food_fastfood.p.20.png"
+            },
+            "bbox": [
+                114.194498,
+                22.2890555,
+                114.194598,
+                22.2891555
+            ],
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.194548,
+                    22.2891055
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place_id": 27979826,
+                "osm_type": "node",
+                "osm_id": 2773486346,
+                "display_name": "Yoshinoya, Tsat Tsz Mui Road, Tsat Tsz Mui, North Point, Eastern District, Hong Kong Island, Hong Kong, 999077, China",
+                "place_rank": 30,
+                "category": "amenity",
+                "type": "fast_food",
+                "importance": 0.31001,
+                "icon": "https://nominatim.openstreetmap.org/ui/mapicons/food_fastfood.p.20.png"
+            },
+            "bbox": [
+                114.2044,
+                22.29147,
+                114.2045,
+                22.29157
+            ],
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.20445,
+                    22.29152
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place_id": 1171343,
+                "osm_type": "node",
+                "osm_id": 339050630,
+                "display_name": "Yoshinoya, 57-87, Shau Kei Wan Road, Kornhill, Sai Wan Ho, Eastern District, Hong Kong Island, Hong Kong, China",
+                "place_rank": 30,
+                "category": "amenity",
+                "type": "fast_food",
+                "importance": 0.31001,
+                "icon": "https://nominatim.openstreetmap.org/ui/mapicons/food_fastfood.p.20.png"
+            },
+            "bbox": [
+                114.2214516,
+                22.2828726,
+                114.2215516,
+                22.2829726
+            ],
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.2215016,
+                    22.2829226
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place_id": 49358819,
+                "osm_type": "node",
+                "osm_id": 4383606689,
+                "display_name": "Yoshinoya, Des Voeux Road Central, SoHo, Sheung Wan, Central and Western District, Hong Kong Island, Hong Kong, China",
+                "place_rank": 30,
+                "category": "amenity",
+                "type": "fast_food",
+                "importance": 0.31001,
+                "icon": "https://nominatim.openstreetmap.org/ui/mapicons/food_fastfood.p.20.png"
+            },
+            "bbox": [
+                114.1534635,
+                22.2859715,
+                114.1535635,
+                22.2860715
+            ],
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1535135,
+                    22.2860215
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place_id": 17049044,
+                "osm_type": "node",
+                "osm_id": 1952089995,
+                "display_name": "Yoshinoya, Connaught Road Central, Government Hill, Central District, Central and Western District, Hong Kong Island, Hong Kong, China",
+                "place_rank": 30,
+                "category": "amenity",
+                "type": "fast_food",
+                "importance": 0.31001,
+                "icon": "https://nominatim.openstreetmap.org/ui/mapicons/food_fastfood.p.20.png"
+            },
+            "bbox": [
+                114.1576546,
+                22.2829521,
+                114.1577546,
+                22.2830521
+            ],
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1577046,
+                    22.2830021
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place_id": 54743484,
+                "osm_type": "node",
+                "osm_id": 4862113238,
+                "display_name": "Yoshinoya, Des Voeux Road West, Shek Tong Tsui, Central and Western District, Hong Kong Island, Hong Kong, China",
+                "place_rank": 30,
+                "category": "amenity",
+                "type": "fast_food",
+                "importance": 0.31001,
+                "icon": "https://nominatim.openstreetmap.org/ui/mapicons/food_fastfood.p.20.png"
+            },
+            "bbox": [
+                114.1366342,
+                22.2869061,
+                114.1367342,
+                22.2870061
+            ],
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1366842,
+                    22.2869561
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place_id": 62217455,
+                "osm_type": "node",
+                "osm_id": 5740310042,
+                "display_name": "Yoshinoya, 5, Nam Ning Street, Shek Pai Wan, Aberdeen, Southern District, Hong Kong Island, Hong Kong, China",
+                "place_rank": 30,
+                "category": "amenity",
+                "type": "fast_food",
+                "importance": 0.31001,
+                "icon": "https://nominatim.openstreetmap.org/ui/mapicons/food_fastfood.p.20.png"
+            },
+            "bbox": [
+                114.1537588,
+                22.2481314,
+                114.1538588,
+                22.2482314
+            ],
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1538088,
+                    22.2481814
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place_id": 46973561,
+                "osm_type": "node",
+                "osm_id": 4085888181,
+                "display_name": "Yoshinoya, Nathan Road, Mong Kok, Yau Tsim Mong District, Kowloon, Hong Kong, China",
+                "place_rank": 30,
+                "category": "amenity",
+                "type": "fast_food",
+                "importance": 0.31001,
+                "icon": "https://nominatim.openstreetmap.org/ui/mapicons/food_fastfood.p.20.png"
+            },
+            "bbox": [
+                114.1688084,
+                22.3210502,
+                114.1689084,
+                22.3211502
+            ],
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1688584,
+                    22.3211002
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place_id": 49430758,
+                "osm_type": "node",
+                "osm_id": 4379477491,
+                "display_name": "Yoshinoya, Soy Street, King's Park, Mong Kok, Yau Tsim Mong District, Kowloon, Hong Kong, 999077, China",
+                "place_rank": 30,
+                "category": "amenity",
+                "type": "fast_food",
+                "importance": 0.31001,
+                "icon": "https://nominatim.openstreetmap.org/ui/mapicons/food_fastfood.p.20.png"
+            },
+            "bbox": [
+                114.1720349,
+                22.3167839,
+                114.1721349,
+                22.3168839
+            ],
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1720849,
+                    22.3168339
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place_id": 17082583,
+                "osm_type": "node",
+                "osm_id": 1950778857,
+                "display_name": "Yoshinoya, Tak Hong Street, Tai Wan, Hung Hom, Kowloon City District, Kowloon, Hong Kong, 999077, China",
+                "place_rank": 30,
+                "category": "amenity",
+                "type": "fast_food",
+                "importance": 0.31001,
+                "icon": "https://nominatim.openstreetmap.org/ui/mapicons/food_fastfood.p.20.png"
+            },
+            "bbox": [
+                114.1904766,
+                22.305782,
+                114.1905766,
+                22.305882
+            ],
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1905266,
+                    22.305832
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place_id": 54701031,
+                "osm_type": "node",
+                "osm_id": 4858163785,
+                "display_name": "Yoshinoya, Nanking Street, Kwun Chung, Yau Ma Tei, Yau Tsim Mong District, Kowloon, Hong Kong, China",
+                "place_rank": 30,
+                "category": "amenity",
+                "type": "fast_food",
+                "importance": 0.31001,
+                "icon": "https://nominatim.openstreetmap.org/ui/mapicons/food_fastfood.p.20.png"
+            },
+            "bbox": [
+                114.1693022,
+                22.3062527,
+                114.1694022,
+                22.3063527
+            ],
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1693522,
+                    22.3063027
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place_id": 54704693,
+                "osm_type": "node",
+                "osm_id": 4858570240,
+                "display_name": "Yoshinoya, 210, Castle Peak Road – Tsuen Wan, Tsuen Wan East Industrial Area, Tsuen Wan Town Centre, Muk Min Ha Tsuen, Tsuen Wan District, New Territories, Hong Kong, China",
+                "place_rank": 30,
+                "category": "amenity",
+                "type": "fast_food",
+                "importance": 0.31001,
+                "icon": "https://nominatim.openstreetmap.org/ui/mapicons/food_fastfood.p.20.png"
+            },
+            "bbox": [
+                114.1183817,
+                22.3729145,
+                114.1184817,
+                22.3730145
+            ],
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1184317,
+                    22.3729645
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place_id": 83883449,
+                "osm_type": "node",
+                "osm_id": 8424663484,
+                "display_name": "Yoshinoya, Lung Sum Avenue, Sheung Shui Town Centre, Sheung Shui, North District, New Territories, Hong Kong, 518005, China",
+                "place_rank": 30,
+                "category": "amenity",
+                "type": "fast_food",
+                "importance": 0.31001,
+                "icon": "https://nominatim.openstreetmap.org/ui/mapicons/food_fastfood.p.20.png"
+            },
+            "bbox": [
+                114.1299189,
+                22.5038022,
+                114.1300189,
+                22.5039022
+            ],
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1299689,
+                    22.5038522
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place_id": 54493890,
+                "osm_type": "node",
+                "osm_id": 4850727621,
+                "display_name": "Yoshinoya, Tuen Mun Heung Sze Wui Road, Tuen Mun San Hui, Tuen Mun Central, Leung Tin Village, Tuen Mun District, New Territories, Hong Kong, China",
+                "place_rank": 30,
+                "category": "amenity",
+                "type": "fast_food",
+                "importance": 0.31001,
+                "icon": "https://nominatim.openstreetmap.org/ui/mapicons/food_fastfood.p.20.png"
+            },
+            "bbox": [
+                113.9750653,
+                22.3985405,
+                113.9751653,
+                22.3986405
+            ],
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    113.9751153,
+                    22.3985905
+                ]
+            }
+        }
+    ]
+}
