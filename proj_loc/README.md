@@ -145,4 +145,3 @@ $\omega_S$ and $\omega_P$ are hyparameters for the weight of "Modified Similiari
 Best ten candidates:
 
 ![](img/top_10_sites.png)
-
