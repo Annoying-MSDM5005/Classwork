@@ -10,13 +10,10 @@ We are going to utilize the data of current site of Yoshinoya and other famous f
 
 We collected the locations and corresponding demographic and social data of all the restaurants of the following brands:
 
-* Cafe de Coral
+- Cafe de Coral
 - Fairwood
-
 - McDonald's
-
 - KFC
-
 - Yoshinoya
 
 for modelling.
@@ -71,3 +68,5 @@ For simplification, we can use the cosine similarity
 $$
 s_{ij} = \cos(r_{i:},r_{j:})
 $$
+
+Then, we can predict how customers will rating if we open a new restruant at candiate locations.
