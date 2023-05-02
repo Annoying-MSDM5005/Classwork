@@ -41,13 +41,19 @@ def cosine_similarity(candidate_feature:pd.DataFrame,target_feature:pd.Series):
     """
     return candidate_feature.apply(lambda row: np.dot(row,target_feature)/(norm(row)*norm(target_feature)),axis=1)
 
+def minmaxnorm(x):
+    """
+    Minmax normalization
+    """
+    return (x-x.min())/(x.max()-x.min())
+
 def minmax_normalize(geodf:gpd.GeoDataFrame):
     """
     Normalize the dataframe
     """
     geom = geodf.geometry
     geodf = pd.DataFrame(geodf.select_dtypes(include=np.number))
-    geodf = (geodf-geodf.min())/(geodf.max()-geodf.min())
+    geodf = minmaxnorm(geodf)
     geodf = gpd.GeoDataFrame(geodf,geometry=geom)
     return geodf
 
@@ -55,3 +61,14 @@ def min_distance(candidates_location:gpd.GeoSeries, yoshi:gpd.GeoDataFrame):
     candidates_location = candidates_location.to_crs(epsg=2326)
     yoshi = yoshi.to_crs(epsg=2326)
     return candidates_location.apply(lambda location: yoshi.distance(location).min())
+
+def get_density(df:gpd.GeoDataFrame, col:str):
+    """
+    Get the density of the column
+    """
+    return df[col]/df.to_crs(epsg=6933).area
+
+def create_features(dcca:gpd.GeoDataFrame):
+    dcca['t_tmmearn'] = dcca.t_mmearn*dcca.t_wp
+    dcca["den_pop"] = get_density(dcca,"t_pop")
+    dcca["den_income"] = dcca.t_mmearn*dcca.den_pop
