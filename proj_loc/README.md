@@ -105,6 +105,8 @@ $$
 
 Then, we can predict how customers will rating if we open a new restruant at candiate sites.
 
+![](img/rating_candidates.png)
+
 ### Potential Return Value Score
 
 Second, we define the "Potential Purchasing Power" $P$ of each candidate site as:
