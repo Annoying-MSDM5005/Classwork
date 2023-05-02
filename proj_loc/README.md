@@ -10,13 +10,10 @@ We are going to utilize the data of current site of Yoshinoya and other famous f
 
 We collected the locations and corresponding demographic and social data of all the restaurants of the following brands:
 
-* Cafe de Coral
+- Cafe de Coral
 - Fairwood
-
 - McDonald's
-
 - KFC
-
 - Yoshinoya
 
 for modelling.
@@ -35,8 +32,7 @@ Our model consists of 4 sub-models, each of them evaluates different measurement
 We linear combine the output score of each sub-model with weight:
 
 $$
-Score=\sum_k\omega_kM_k
-
+Score=\sum_k\omega_k M_k
 $$
 
 where $\omega_k$ is the weight of output of the $k^{th}$ model and $M_k$ is the functor of the $k^{th}$ sub-model.
@@ -72,3 +68,5 @@ For simplification, we can use the cosine similarity
 $$
 s_{ij} = \cos(r_{i:},r_{j:})
 $$
+
+Then, we can predict how customers will rating if we open a new restruant at candiate locations.
