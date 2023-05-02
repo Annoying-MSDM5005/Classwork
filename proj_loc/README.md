@@ -1,4 +1,4 @@
-# Composite Geographic Location Scoring Model
+# Composite Geographic site Scoring Model
 
 ## Basic strategy on site selection
 
@@ -8,9 +8,9 @@ Hong Kong is a developed city with small area suitable for human habitation, alm
 
 ## Find potential candidate
 
-Find potential candidate locations utilizing experience from other brands' restaurants
+Find potential candidate sites utilizing experience from other brands' restaurants
 
-We collected the locations of all the restaurants of the following brands:
+We collected the sites of all the restaurants of the following brands:
 
 - Yoshinoya
 - McDonald's
@@ -18,20 +18,20 @@ We collected the locations of all the restaurants of the following brands:
 - Cafe de Coral
 - KFC
 
-We remove locations of other brands within 1km of Yoshinoya's restaurants. The remaining locations are potential candidate locations for Yoshinoya's new restaurants.
+We remove sites of other brands within 1km of Yoshinoya's restaurants. The remaining sites are potential candidate sites for Yoshinoya's new restaurants.
 
-Meanwhile, we also calculate the metric=(Median monthly income)*(Working Population) to evaluate the potential purchasing power of each location.
+Meanwhile, we also calculate the metric=(Median monthly income)*(Working Population) to evaluate the potential purchasing power of each site.
 
 ## Modelling
 
-Our model consists of 4 sub-models, each of them evaluates different measurement one should care for location selection.
+Our model consists of 4 sub-models, each of them evaluates different measurement one should care for site selection.
 
 | Sub model                    | Description                                                                                                                                                                                                                    | Goal                                                                                          |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------- |
 | Modified Similiarity Score   | Measure the similarity between features of candidates and features of exsited Yoshinoya resturant                                                                                                                              | To evaluate how the candidate match the historical pattern of site selection of yoshinoya.    |
-| Potential Return Value Score | Measure the potential return by the potential purchase power of customers and average rent of shop in the candidate location                                                                                                   | To evaluate how much return if we invest and open a new restruant at this candidate location. |
-| GeoRecommend Model           | Use the customers rating of Yoshinoya and other fast food brands to build a recommend system, in this scenario, we treat each location or geoblock as a user.                                                                  | To evaluate how customers will rating if we open a new restruant at this candiate location    |
-| Logistics Regression         | With the exsited distribution data of  Yoshinoya and other fast food brands and demographic data of each location or geoblock, use Logistics Model to regress the likelihood whether there should be a new fast food resturant | To evaluate the likelihood whether one location should have a new fast food restraunt.        |
+| Potential Return Value Score | Measure the potential return by the potential purchase power of customers and average rent of shop in the candidate site                                                                                                   | To evaluate how much return if we invest and open a new restruant at this candidate site. |
+| GeoRecommend Model           | Use the customers rating of Yoshinoya and other fast food brands to build a recommend system, in this scenario, we treat each site or geoblock as a user.                                                                  | To evaluate how customers will rating if we open a new restruant at this candiate site    |
+| Logistics Regression         | With the exsited distribution data of  Yoshinoya and other fast food brands and demographic data of each site or geoblock, use Logistics Model to regress the likelihood whether there should be a new fast food resturant | To evaluate the likelihood whether one site should have a new fast food restraunt.        |
 
 We linear combine the output score of each sub-model with weight:
 
@@ -52,19 +52,19 @@ S(Y_i) = \cos(Y_i,\bar{X})\cdot\sqrt{\frac1{\gamma}\frac{d_i}{d_{\min}}-1}
 
 $$
 
-where $\cos(\cdot,\cdot)$ is the cosine similarity function, $d_i$ is the distance between candidate location and the nearest current yoshinoya, and $d_{\min}$ is the excluded distance and the $\gamma$ is a hyparameter for closeness penalty.
+where $\cos(\cdot,\cdot)$ is the cosine similarity function, $d_i$ is the distance between candidate site and the nearest current yoshinoya, and $d_{\min}$ is the excluded distance and the $\gamma$ is a hyparameter for closeness penalty.
 
-This the "Modified Similiarity Score" measures how the candidate match the historical standard of stores' location choosing of yoshinoya.
+This the "Modified Similiarity Score" measures how the candidate match the historical standard of stores' site choosing of yoshinoya.
 
 ### Potential Return Value Score
 
-Second, we define the "Potential Purchasing Power" $P$ of each candidate location as:
+Second, we define the "Potential Purchasing Power" $P$ of each candidate site as:
 
 $$
 P(Y_i) = I_i*W_i
 $$
 
-where $I_i$ is the median monthly income of the $i^{th}$ candidate location and $W_i$ is the working population of the $i^{th}$ candidate location.
+where $I_i$ is the median monthly income of the $i^{th}$ candidate site and $W_i$ is the working population of the $i^{th}$ candidate site.
 
 The convenience of transportation is an important factor in site selection, so we will take the distance from the subway station into consideration.
 
@@ -76,13 +76,13 @@ $$
 
 where $d_i$ represents the distance from the nearest subway station, threshold and slope are parameters that need to be adjusted.
 
-Then, we define the "Value" $V$ of each candidate location as:
+Then, we define the "Value" $V$ of each candidate site as:
 
 $$
 V(Y_i) = \omega_S S(Y_i) + \omega_P \frac{P(Y_i)}{R(Y_i)} + \omega_M M(Y_i)
 $$
 
-where $R(Y_i)$ is the average rent of the $i^{th}$ candidate location,
+where $R(Y_i)$ is the average rent of the $i^{th}$ candidate site,
 $\omega_S$ and $\omega_P$ are hyparameters for the weight of "Modified Similiarity Score" and "Potential Purchasing Power" respectively.
 
 ### GeoRecommend Model
@@ -117,4 +117,4 @@ $$
 s_{ij} = \cos(r_{i:},r_{j:})
 $$
 
-Then, we can predict how customers will rating if we open a new restruant at candiate locations.
+Then, we can predict how customers will rating if we open a new restruant at candiate sites.
