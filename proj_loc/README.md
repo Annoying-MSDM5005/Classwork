@@ -20,18 +20,30 @@ We collected the sites of all the restaurants of the following brands:
 
 We remove sites of other brands within 1km of Yoshinoya's restaurants. The remaining sites are potential candidate sites for Yoshinoya's new restaurants.
 
+First of all, let visualize the distribution of the sites of Yoshinoya and other brands.
+
+![](img/sites_yoshi.png)
+
+![](img/sites_competitor.png)
+
+<center><img src="img/num_sites.png" style="zoom:.5"></center>
+
+> From the above figure, we can see that the number of current site of Yoshinoya is less than other brands, so we can find more potential candidate sites for Yoshinoya to expand to confront other fast food brands.
+
 Meanwhile, we also calculate the metric=(Median monthly income)*(Working Population) to evaluate the potential purchasing power of each site.
+
+![](img/dcca_t_tmmearn.png)
 
 ## Modelling
 
 Our model consists of 4 sub-models, each of them evaluates different measurement one should care for site selection.
 
-| Sub model                    | Description                                                                                                                                                                                                                    | Goal                                                                                          |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------- |
-| Modified Similiarity Score   | Measure the similarity between features of candidates and features of exsited Yoshinoya resturant                                                                                                                              | To evaluate how the candidate match the historical pattern of site selection of yoshinoya.    |
-| Potential Return Value Score | Measure the potential return by the potential purchase power of customers and average rent of shop in the candidate site                                                                                                   | To evaluate how much return if we invest and open a new restruant at this candidate site. |
-| GeoRecommend Model           | Use the customers rating of Yoshinoya and other fast food brands to build a recommend system, in this scenario, we treat each site or geoblock as a user.                                                                  | To evaluate how customers will rating if we open a new restruant at this candiate site    |
-| Logistics Regression         | With the exsited distribution data of  Yoshinoya and other fast food brands and demographic data of each site or geoblock, use Logistics Model to regress the likelihood whether there should be a new fast food resturant | To evaluate the likelihood whether one site should have a new fast food restraunt.        |
+| Sub model                    | Description                                                                                                                                                                                                                | Goal                                                                                       |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| Modified Similiarity Score   | Measure the similarity between features of candidates and features of exsited Yoshinoya resturant                                                                                                                          | To evaluate how the candidate match the historical pattern of site selection of yoshinoya. |
+| Potential Return Value Score | Measure the potential return by the potential purchase power of customers and average rent of shop in the candidate site                                                                                                   | To evaluate how much return if we invest and open a new restruant at this candidate site.  |
+| GeoRecommend Model           | Use the customers rating of Yoshinoya and other fast food brands to build a recommend system, in this scenario, we treat each site or geoblock as a user.                                                                  | To evaluate how customers will rating if we open a new restruant at this candiate site     |
+| Logistics Regression         | With the exsited distribution data of  Yoshinoya and other fast food brands and demographic data of each site or geoblock, use Logistics Model to regress the likelihood whether there should be a new fast food resturant | To evaluate the likelihood whether one site should have a new fast food restraunt.         |
 
 We linear combine the output score of each sub-model with weight:
 
