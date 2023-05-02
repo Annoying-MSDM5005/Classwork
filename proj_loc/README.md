@@ -36,6 +36,10 @@ We remove sites of other brands within 1km of Yoshinoya's restaurants. The remai
 
 ![](img/site_candidates.png)
 
+Rent is one of the most important factors to consider when choosing a store location, as the price of rent directly affects the cost of opening a store and the profitability of the business.
+Here are the average rent of each district:
+![](img/rent.png)
+
 ## Modelling
 
 Our model consists of 4 sub-models, each of them evaluates different measurement one should care for site selection.
@@ -135,3 +139,8 @@ where $R(Y_i)$ is the average rent of the $i^{th}$ candidate site,
 $\omega_S$ and $\omega_P$ are hyparameters for the weight of "Modified Similiarity Score" and "Potential Purchasing Power" respectively.
 
 ![](img/value_candidates.png)
+
+Best ten candidates:
+
+![](img/top_10_sites.png)
+
