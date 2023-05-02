@@ -4,7 +4,7 @@
 
 **Learn the experience of site selection from your competitors.**
 
-Hong Kong is a developed city with small area suitable for human habitation, almost every ecological niche is taken, so you can't find a new niche without competitors. Thus we have to accept this truth and confront with our competitors. 
+Hong Kong is a developed city with small area suitable for human habitation, almost every ecological niche is taken, so you can't find a new niche without competitors. Thus we have to accept this truth and confront with our competitors.
 
 ## Find potential candidate
 
@@ -28,7 +28,7 @@ First of all, let visualize the distribution of the sites of Yoshinoya and other
 
 > From the above figure, we can see that the number of current site of Yoshinoya is less than other brands, so we can find more potential candidate sites for Yoshinoya to expand to confront other fast food brands.
 
-Meanwhile, we also calculate the metric=(Median monthly income)*(Working Population) to evaluate the potential purchasing power of each site.
+Meanwhile, we also calculate the metric=(Median monthly income)\*(Working Population) to evaluate the potential purchasing power of each site.
 
 ![](img/dcca_t_tmmearn.png)
 
@@ -101,7 +101,7 @@ $$
 
 where $s_{ki}$ is the similarity between $k^{th}$ GeoUser and $j^{th}$ GeoUser.
 
-For simplification, we can use the cosine similarity 
+For simplification, we can use the cosine similarity
 
 $$
 s_{ij} = \cos(r_{i:},r_{j:})
@@ -123,7 +123,7 @@ where $I_i$ is the median monthly income of the $i^{th}$ candidate site and $W_i
 
 The convenience of transportation is an important factor in site selection, so we will take the distance from the subway station into consideration.
 
-Using sigmoid function, the score $M(Y_i)$ is defined as 
+Using sigmoid function, the score $M(Y_i)$ is defined as
 
 $$
 M(Y_i) =  1 / (1 + exp((d_i - threshold) / slope))
@@ -145,3 +145,25 @@ $\omega_S$ and $\omega_P$ are hyparameters for the weight of "Modified Similiari
 Best ten candidates:
 
 ![](img/top_10_sites.png)
+
+## Top 5 Sites Introduction in Chinese
+
+#### LOHAS PARK, SAI KUNG
+
+日出康城由港铁公司策划，各期由不同发展商兴建，是一个包括住宅、商场、公园、海滨长廊的铁路上盖综合发展。整个区域背山面海，西面及南面均为大海，东面及北面则为山（其中东面为清水湾郊野公园，[1]目前区内有多幅土地正兴建私人住宅，住户多为中产家庭，据《2016 中期人口统计》报告显示，日出康城家庭月入中位数为 57,210 港元[2]，较全港月入中位数 25,000 元高[2]，亦有约 13%非华裔外籍人口（不计外佣）居住。
+
+#### Yiu Sha Rd, TAI PO
+
+耀沙路（Yiu Sha Road），位於新界沙田區馬鞍山白石半島與落禾沙之間，西始烏溪沙路／長庚村通道交界迴旋處，經過迎海第四期迎海 • 御峰、渡頭灣村通道、雲海、城市大學白石學生宿舍地盤、泓碧通道／彩沙街路口、星連海、通往落禾沙里未命名路迴旋處、Silversands，東接白石俱樂部通道。
+
+#### Tung Chung Waterfront Road, ISLANDS
+
+东涌海滨路（英语：Tung Chung Waterfront Road）是香港离岛区大屿山北部沿海的一条街道，主要是行车道，前身是新填海区。东涌海滨路东至迎禧路，西至顺东路及赤鱲角南路交汇处。东涌海滨路之中途，经过北大屿山快速公路行车天桥、东涌新发展码头、渡轮码头旁之的士站、巴士站、新建成的东涌海滨长廊、海堤湾畔第三期、惠东路及行人天桥及怡东路止。
+
+#### Gillies Avenue, KOWLOON CITY
+
+機利士路（英語：Gillies Avenue）是香港九龍紅磡至鶴園一帶的其中一條道路，分為南北兩段，分別稱為機利士南路和機利士北路，以佛光街為分界，現時已不相通。道路以黃埔船塢高級職員機利士（Gillies）命名。機利士南路由佛光街至差館里的一段已改建成行人道（2011 年重新通車，但只限九龍英基小學的校巴可以使用該路段，其他車輛不能駛入），只剩下北至差館里、南至紅磡南道與暢運道交界的一段可以行車，當中蕪湖街以北的一段為單向南行，其餘路段雙向行車。車輛亦可從漆咸道北北行經地底行車隧道進入機利士南路的北段。
+
+#### Chatham Road, KOWLOON CITY
+
+漆咸道（英语：Chatham Road）是香港九龙区的一条主要道路，分为漆咸道南（英语：Chatham Road South）及漆咸道北（英语：Chatham Road North）两段。漆咸道以前由讯号山一带连接到红磡及老龙坑一带，现时已延长至土瓜湾。延长段由于其地理位置，所以命名为漆咸道北，而原来的一段则更名为漆咸道南。当中漆咸道南是一条南北走向的道路，南至梳士巴利道，北至加士居道、公主道及康庄道交界。而漆咸道北则由康庄道桥底向北伸延，连接马头围道及东九龙走廊往九龙湾与观塘。介乎加士居道至康庄道之间的漆咸道南，和介乎康庄道至东九龙走廊之间的漆咸道北是香港 5 号干线的一部分，由于可经康庄道连接红磡海底隧道前往香港岛，加上来往东西九龙的车流，该段道路交通经常严重挤塞。
