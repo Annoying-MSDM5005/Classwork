@@ -1,4 +1,4 @@
-# Composite Geographic site Scoring Model
+# Composite Geographic Site Scoring Model
 
 ## Basic strategy on site selection
 
