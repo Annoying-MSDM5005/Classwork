@@ -18,8 +18,6 @@ We collected the sites of all the restaurants of the following brands:
 - Cafe de Coral
 - KFC
 
-We remove sites of other brands within 1km of Yoshinoya's restaurants. The remaining sites are potential candidate sites for Yoshinoya's new restaurants.
-
 First of all, let visualize the distribution of the sites of Yoshinoya and other brands.
 
 ![](img/sites_yoshi.png)
@@ -33,6 +31,10 @@ First of all, let visualize the distribution of the sites of Yoshinoya and other
 Meanwhile, we also calculate the metric=(Median monthly income)*(Working Population) to evaluate the potential purchasing power of each site.
 
 ![](img/dcca_t_tmmearn.png)
+
+We remove sites of other brands within 1km of Yoshinoya's restaurants. The remaining sites are potential candidate sites for Yoshinoya's new restaurants.
+
+![](img/site_candidates.png)
 
 ## Modelling
 
@@ -61,12 +63,47 @@ First, let us define the "Modified Similiarity Score" $S$ between the feature of
 
 $$
 S(Y_i) = \cos(Y_i,\bar{X})\cdot\sqrt{\frac1{\gamma}\frac{d_i}{d_{\min}}-1}
-
 $$
 
 where $\cos(\cdot,\cdot)$ is the cosine similarity function, $d_i$ is the distance between candidate site and the nearest current yoshinoya, and $d_{\min}$ is the excluded distance and the $\gamma$ is a hyparameter for closeness penalty.
 
 This the "Modified Similiarity Score" measures how the candidate match the historical standard of stores' site choosing of yoshinoya.
+
+![](img/sim_candidates.png)
+
+### GeoRecommend Model
+
+We treat each geoblock as a user in the recommend model named as GeoUser.
+
+Then we can construct a Table for the recommend model like this:
+
+|           | Brand_1 | Brand_2 | Brand_3 | Brand_4 | Brand_5 |
+| --------- | ------- | ------- | ------- | ------- | ------- |
+| GeoUser 1 | 2/5     |         |         | 3/5     | 4/5     |
+| GeoUser 2 | 1/5     | 1/5     | 2/5     |         |         |
+| GeoUser 3 |         |         |         | 5/5     | 3/5     |
+
+There are many different recommend algorithm on rating prediction, for simplification, we just use the most naive one, since you don't pay us for work.
+
+#### Rating Predictions
+
+Let the $r_{ij}$ be the rating of the $i^{th}$ GeoUser on $j^{th}$ brand.
+
+Then we can predict $r_{ij}$ with the formula:
+
+$$
+r_{ij} = \frac{\sum_ks_{ki}r_{kj}}{\sum_ks_{ki}}
+$$
+
+where $s_{ki}$ is the similarity between $k^{th}$ GeoUser and $j^{th}$ GeoUser.
+
+For simplification, we can use the cosine similarity 
+
+$$
+s_{ij} = \cos(r_{i:},r_{j:})
+$$
+
+Then, we can predict how customers will rating if we open a new restruant at candiate sites.
 
 ### Potential Return Value Score
 
@@ -97,36 +134,4 @@ $$
 where $R(Y_i)$ is the average rent of the $i^{th}$ candidate site,
 $\omega_S$ and $\omega_P$ are hyparameters for the weight of "Modified Similiarity Score" and "Potential Purchasing Power" respectively.
 
-### GeoRecommend Model
-
-We treat each geoblock as a user in the recommend model named as GeoUser.
-
-Then we can construct a Table for the recommend model like this:
-
-|           | Brand_1 | Brand_2 | Brand_3 | Brand_4 | Brand_5 |
-| --------- | ------- | ------- | ------- | ------- | ------- |
-| GeoUser 1 | 2/5     |         |         | 3/5     | 4/5     |
-| GeoUser 2 | 1/5     | 1/5     | 2/5     |         |         |
-| GeoUser 3 |         |         |         | 5/5     | 3/5     |
-
-There are many different recommend algorithm on rating prediction, for simplification, we just use the most naive one, since you don't pay us for work.
-
-### Rating Predictions
-
-Let the $r_{ij}$ be the rating of the $i^{th}$ GeoUser on $j^{th}$ brand.
-
-Then we can predict $r_{ij}$ with the formula:
-
-$$
-r_{ij} = \frac{\sum_ks_{ki}r_{kj}}{\sum_ks_{ki}}
-$$
-
-where $s_{ki}$ is the similarity between $k^{th}$ GeoUser and $j^{th}$ GeoUser.
-
-For simplification, we can use the cosine similarity 
-
-$$
-s_{ij} = \cos(r_{i:},r_{j:})
-$$
-
-Then, we can predict how customers will rating if we open a new restruant at candiate sites.
+![](img/value_candidates.png)
